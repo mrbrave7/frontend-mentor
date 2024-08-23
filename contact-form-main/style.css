@@ -1,0 +1,268 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Karla", sans-serif;
+}
+:root{
+    --Green-200-lighter: hsl(148, 38%, 91%);
+    --Green-600-medium: hsl(169, 82%, 27%);
+    --Red: hsl(0, 66%, 56%);
+    --White: hsl(0, 0%, 100%);
+    --Grey-500-medium: hsl(186, 15%, 59%);
+    --Grey-900-darker: hsl(187, 24%, 22%);
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background: var(--Green-200-lighter);
+    display: flex;
+    align-items: center;
+    color: var(--Grey-900-darker);
+    justify-content: center;
+    margin: auto;
+}
+label{
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+input{
+    width: 100%;
+    padding: 12px ;
+    height: 40px;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid var(--Grey-900-darker);
+}
+.star{
+    color: var(--Green-600-medium);
+}
+input:focus{
+    border: 2px solid var(--Green-600-medium);
+}
+form h1{
+    font-size: 1.5rem;
+}
+form{
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+    padding: 40px;
+    background: var(--White);
+}
+form .first{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    justify-content: space-between;
+    align-self: center;
+}
+form .first .half{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.error-message{
+    color: var(--Red);
+    margin-top: 8px;
+    font-weight: 600;
+}
+form .second{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+form .radiobuttons{
+    width: 100%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+}
+form .radiobuttons .radios{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    gap: 15px;
+    justify-content: space-between;
+}
+form .radiobuttons .radios label{
+    display: flex;
+    cursor: pointer;
+    width: 100%;
+    border: 2px solid var(--Grey-900-darker);
+    font-size: 16px;
+    padding: 12px 20px;
+    border-radius: 8px;
+}
+form .radiobuttons .radios label .label{
+    margin-left: 15px;
+}
+form .radiobuttons .radios label:hover{
+    background: var(--Green-200-lighter);
+    border-color: var(--Green-600-medium);
+}
+form .radiobuttons .radios label input{
+    width: 100%;
+}
+form .radiobuttons .radios label input[type="radio"] {
+    display: none;
+}
+form .radiobuttons .radios label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-block: 10px;
+    font-size: 14px;
+    position: relative;
+}
+
+form .radiobuttons .radios label::before {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--Green-600-medium);
+    border-radius: 50%;
+    background-color: #fff;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+form .radiobuttons .radios label input[type="radio"]:checked + .label::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--Green-600-medium);
+    top: 16px;
+    left: 24px;
+    transition: all 0.3s ease;
+}
+form .radiobuttons .radios label:hover::before {
+    border-color: var(--Green-600-medium);
+}
+.message{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.message textarea{
+    width: 100%;
+    height: 120px;
+    padding: 20px;
+    font-size: 12px;
+    outline: none;
+    border: 2px solid var(--Grey-900-darker);
+    border-radius: 8px;
+}
+.message textarea:focus{
+    border-color: var(--Green-600-medium);
+}
+.check{
+    width: 100%;
+    display: flex;
+    margin-block: 10px;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+    padding: 4px;
+}
+.check input[type="checkbox"] {
+    accent-color: var(--Green-600-medium);
+    height: 15px;
+    width: 15px;
+}
+button{
+    background: var(--Green-600-medium);
+    color: var(--White);
+    width: 100%;
+    height: 40px;
+    font-size: 1rem;
+    border-radius: 8px;
+    outline: none;
+}
+button:hover{
+    background: var(--Grey-900-darker);
+}
+.success-message{
+    position: absolute;
+    top: 30px;
+    background: var(--Grey-900-darker);
+    color: var(--White);
+    padding: 30px;
+    border-radius: 8px;
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    align-items: start;
+}
+@media only screen and (max-width: 600px) {
+    body{
+        height: 100%;
+        width: 100%;
+    }
+    .first{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .half{
+        width: 100%;
+    }
+    .half input{
+        width: 100%;
+    }
+    .radios{
+        flex-direction: column;
+    }
+    form .radiobuttons .radios label input[type="radio"]:checked + .label::before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: var(--Green-600-medium);
+        top: 16px;
+        left: 24px;
+        transition: all 0.3s ease;
+    }
+    button{
+        background: var(--Green-600-medium);
+        color: var(--White);
+        width: 100%;
+        height: 40px;
+        font-size: 1rem;
+        margin-top: 15px;
+        border: none;
+        border-radius: 8px;
+        outline: none;
+    }
+    button:hover{
+        background: var(--Grey-900-darker);
+    }
+    .success-message{
+        position: absolute;
+        top: 30px;
+        background: var(--Grey-900-darker);
+        color: var(--White);
+        padding: 30px;
+        border-radius: 8px;
+        display: none;
+        width: 80%;
+        flex-direction: column;
+        gap: 5px;
+        align-items: start;
+    }
+    .success-message h1{
+        font-size: 16px;
+    }
+    .success-message p{
+        font-size: 12px;
+    }
+} 

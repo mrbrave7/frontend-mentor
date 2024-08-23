@@ -1,0 +1,188 @@
+@media only screen and (min-width: 1200px) {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    :root{
+    ---Red: hsl(0, 78%, 62%);
+    ---Cyan: hsl(180, 62%, 55%);
+    ---Orange: hsl(34, 97%, 64%);
+    ---Blue: hsl(212, 86%, 64%);
+    ---Very-Dark-Blue: hsl(234, 12%, 34%);
+    ---Grayish-Blue: hsl(229, 6%, 66%);
+    ---Very-Light-Gray: hsl(0, 0%, 98%);
+    }
+    p{
+        font-size: 15px;
+        color: var(---Very-Dark-Blue);
+    }
+    body{
+        font-family: "Poppins";
+        background: var(---Very-Light-Gray);
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+        color: var(---Very-Dark-Blue);
+        
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 100px;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 60%;
+        gap: 15px;
+        padding: 40px;
+    }
+    header h2{
+        font-size: 2rem;
+        font-weight: 300;
+    }
+    header p{
+        font-size: 15px;
+        text-align: center;
+    }
+    section{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        place-items: center;
+        gap: 20px;
+    }
+    .card{
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        gap: 5px;
+        width: 340px;
+        padding: 30px;
+        background: var(---Very-Light-Gray);
+        box-shadow: 0px 0px 15px var(---Grayish-Blue);
+        border-radius: 8px;
+        height: 280px;
+        position: relative;
+    }
+    .card:nth-child(1){
+        border-top: 7px solid var(---Cyan);
+        grid-row: 1 / span 2;
+    }
+    .card:nth-child(2){
+        border-top: 7px solid var(---Red);
+        grid-row: 1 / span 1;
+    }
+    .card:nth-child(4){
+        border-top: 7px solid var(---Cyan);
+        grid-row: 1 / span 2;
+    }
+    .card:nth-child(3){
+        border-top: 7px solid var(---Orange);
+    }
+    .card svg{
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins";
+    }
+    :root{
+        ---Red: hsl(0, 78%, 62%);
+        ---Cyan: hsl(180, 62%, 55%);
+        ---Orange: hsl(34, 97%, 64%);
+        ---Blue: hsl(212, 86%, 64%);
+        ---Very-Dark-Blue: hsl(234, 12%, 34%);
+        ---Grayish-Blue: hsl(229, 6%, 66%);
+        ---Very-Light-Gray: hsl(0, 0%, 98%);
+        }
+        p{
+            font-size: 15px;
+        }
+        body{
+            font-family: "Poppins";
+            background: var(---Very-Light-Gray);
+            display: flex;
+            min-height: 100vh;
+            width: 100vw;
+            align-items: center;
+            justify-content: center;
+            color: var(---Very-Dark-Blue);
+            
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 35px;
+            gap: 30px;
+        }
+        header{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+        header h1{
+            font-size: 1.7rem;
+        }
+        header h2{
+            font-size: 1.7rem;
+            font-weight: 300;
+        }
+        header p{
+            font-size: 15px;
+            text-align: center;
+        }
+    section{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .card{
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        gap: 5px;
+        width: 340px;
+        padding: 30px;
+        background: var(---Very-Light-Gray);
+        box-shadow: 0px 0px 15px var(---Grayish-Blue);
+        border-radius: 8px;
+        height: 300px;
+        position: relative;
+    }
+    .card svg{
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+    }
+    .card:nth-child(1){
+        border-top: 7px solid var(---Cyan);
+    }
+    .card:nth-child(2){
+        border-top: 7px solid var(---Red);
+    }
+    .card:nth-child(3){
+        border-top: 7px solid var(---Orange);
+    }
+    .card:nth-child(4){
+        border-top: 7px solid var(---Blue);
+    }
+    
+} 

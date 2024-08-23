@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Contact form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+    <script src="./script.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <form action="#">
+    <h1>
+      Contact Us
+    </h1>
+    <div class="first">
+      <div class="half">
+        <label for="firstname">Firstname <span class="star">*</span></label>
+        <input type="text" name="firstname" id="firstname">
+        <p class="error-message" id="firstNameError"></p>
+      </div>
+      <div class="half">
+        <label for="lastname">Lastname <span class="star">*</span></label>
+        <input type="text" name="lastname" id="lastname">
+        <p class="error-message" id="lastNameError"></p>
+      </div>
+    </div>
+    <div class="second">
+      <label for="email">Email Address <span class="star">*</span></label>
+      <input type="email" name="email" id="email">
+      <p class="error-message" id="emailError"></p>
+    </div>
+    <div class="radiobuttons">
+      <label for="radios">Query Type <span class="star">*</span></label>
+      <div class="radios">
+        <label for="general">
+          <input type="radio" value="General Query" name="query" id="general">
+          <span class="label">General Enquiry</span>
+        </label>
+        <label for="support">
+          <input type="radio" value="support Request" name="query" id="support">
+          <span class="label">Support Request</span>
+        </label>
+      </div>
+      <p class="error-message" id="radioError"></p>
+    </div>
+    <div class="message">
+      <label for="message">Message <span class="star">*</span></label>
+      <textarea name="message" id="message"></textarea>
+      <p class="error-message" id="messageError"></p>
+    </div>
+   <div class="check-bol">
+    <div class="check">
+      <input type="checkbox" name="contact" id="contact" >
+      <label for="contact">I consent to being contacted by the team</label>
+    </div>
+    <p class="error-message" id="checkboxError"></p>
+   </div>
+    <button type="submit">Submit</button>
+  </form>
+<div class="success-message" id="success-message">
+  <h1>
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" fill="none" viewBox="0 0 20 21"><path fill="#fff" d="M14.28 7.72a.748.748 0 0 1 0 1.06l-5.25 5.25a.748.748 0 0 1-1.06 0l-2.25-2.25a.75.75 0 1 1 1.06-1.06l1.72 1.72 4.72-4.72a.75.75 0 0 1 1.06 0Zm5.47 2.78A9.75 9.75 0 1 1 10 .75a9.76 9.76 0 0 1 9.75 9.75Zm-1.5 0A8.25 8.25 0 1 0 10 18.75a8.26 8.26 0 0 0 8.25-8.25Z"/></svg>
+    <span>Message Sent</span>
+  </h1>
+  <p>Thanks for completing the form. We'll be in touch soon!</p>
+</div>
+</body>
+
+</html>

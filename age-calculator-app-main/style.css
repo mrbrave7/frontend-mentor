@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+:root{
+    ---White: hsl(0, 0%, 100%);
+---Off-white: hsl(0, 0%, 94%);
+---Light-grey: hsl(0, 0%, 86%);
+---Smokey-grey: hsl(0, 1%, 44%);
+---Off-black: hsl(0, 0%, 8%);
+---Purple: hsl(259, 100%, 65%);
+---Light-red: hsl(0, 100%, 67%);
+}
+body{
+    height: 100vh;
+    background: var(---Off-white);
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    display: flex;
+    align-items: start;
+    position: relative;
+    gap: 2rem;
+    background: var(---White);
+    width: 55%;
+    padding: 60px;
+    border-radius: 12px 12px 120px 25px;
+    flex-direction: column;
+}
+.container hr{
+    margin-top: 1rem;
+    height: 2px ;
+    background: var(---Light-grey);
+    width: 90%;
+    border: none;
+}
+.container button{
+    position: absolute;
+    top: 160px;
+    right: 70px;
+}
+input{
+    padding: 16px;
+    height: 60px;
+    width: 140px;
+    border-radius: 8px;
+    outline: none;
+    font-size: 32px;
+    border: 2px solid var(---Light-grey);
+    font-weight: 700;
+}
+label{
+    font-size: 14px;
+    font-weight: 600;
+    color: var(---Smokey-grey);
+}
+.errorMsg{
+    color: var(---Light-red);
+    font-size: 14px;
+    font-style: italic;
+}
+.input-div{
+    display: flex;
+    gap: 1.5rem;
+}
+.input_field{
+    display: flex;
+    gap: 5px;
+    /* align-items: center; */
+    flex-direction: column;
+}
+button{
+    background: var(---Purple);
+    color: var(---White);
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.output-div h1{
+    font-size: 5rem;
+    font-style: italic;
+}
+.output-div h1 .show{
+    color: var(---Purple);
+}
+@media only screen and (max-width: 600px) {
+    body{
+        padding: 40px;
+    }
+    .container{
+        margin-top: 50px;
+        padding: 20px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: fit-content;
+        gap: 2rem;
+        width: 100%;
+    }
+    .container button{
+        height: 40px;
+        width: 40px;
+        position: absolute;    
+        display: flex;
+        left: 45%;
+        top: 30%;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+    }
+    input{
+        font-size: 12px;
+        padding: 10px;
+        height: 30px;
+        width: 60px;
+    }
+    .output-div h1{
+        font-size: 2.5rem;
+        font-style: italic;
+    }
+}

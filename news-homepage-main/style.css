@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+:root {
+    ---Off-white: hsl(36, 100%, 99%);
+    ---Grayish-blue: hsl(233, 8%, 79%);
+    ---Dark-grayish-blue: hsl(236, 13%, 42%);
+    ---Very-dark-blue: hsl(240, 100%, 5%);
+    ---Soft-orange: hsl(35, 77%, 62%);
+    ---Soft-red: hsl(5, 85%, 63%);
+
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    padding: 100px 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .menuItems{
+position: static;
+}
+nav ul {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav ul a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: var(---Dark-grayish-blue);
+}
+
+nav ul a:hover {
+    color: var(---Soft-red);
+    transition: all 0.5s ease;
+}
+
+.open{
+    display: none;
+}
+
+.close {
+    display: none;
+    position: static;
+}
+
+main {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    gap: 3rem;
+}
+
+main .mainSection {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 2rem;
+}
+
+.left {
+    width: 760px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.left img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.lowerContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.lowerContainer h1 {
+    font-size: 4rem;
+}
+
+.lowerLeftContainer {
+    width: 350px;
+}
+
+.lowerRightContainer {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.lowerRightContainer p {
+    font-size: 15px;
+    line-height: 2rem;
+}
+
+.lowerRightContainer button {
+    font-size: 1rem;
+    padding: 12px 30px;
+    color: var(---Very-dark-blue);
+    background: var(---Soft-red);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.lowerRightContainer button:hover {
+    background: var(---Very-dark-blue);
+    color: var(---Soft-red);
+}
+
+.right {
+    background: var(---Very-dark-blue);
+    width: 340px;
+    color: var(---Off-white);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.right h1 {
+    color: var(---Soft-orange);
+    font-size: 3rem;
+}
+
+.right ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    list-style: none;
+}
+
+.right ul li {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+.right ul li h3 {
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+
+}
+
+.right ul li h3:hover {
+    color: var(---Soft-orange);
+}
+
+.right ul li p {
+    color: var(---Grayish-blue);
+    font-size: 15px;
+}
+
+.footSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.card {
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    color: var(---Very-dark-blue);
+}
+
+.card img {
+    width: 100px;
+}
+
+.card .details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.card .details h2 {
+    color: var(---Soft-red);
+}
+
+.card .details h4:hover {
+    color: var(---Soft-red);
+    cursor: pointer;
+}
+
+.card .details p {
+    color: var(---Dark-grayish-blue);
+    font-size: 15px;
+}
+
+@media (max-width: 420px) {
+    body {
+        padding: 30px;
+        width: 400px;
+    }
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 350px;
+        height: 40px;
+    }
+
+    nav .menuItems {
+        background: var(---Off-white);
+        transition: all 0.5s ease-in;
+        width: 80%;
+        height: 500px;
+        right: -100%;
+        top: 240px;
+        display: flex;
+        position: inherit;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .menuItems .open{
+        display: flex;
+        cursor: pointer;
+    }
+    nav .menuItems ul{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+        background: var(---Off-white);
+    }
+    .open{
+        position: absolute;
+        top: 0;
+        right: 15px;
+    }
+    .close{
+        display: flex;
+        cursor: pointer;
+    }
+    .left{
+        /* width: 100%; */
+        height: 100%;
+    }
+    .left img {
+        object-fit: cover;
+        height: 370px;
+        width: 350px;
+    }
+
+    main .mainSection {
+        display: flex;
+        flex-direction: column;
+    }
+    .lowerContainer{
+        display: flex;
+        flex-direction: column;
+    }
+    .footSection {
+        display: flex;
+        flex-direction: column;
+    }
+}
