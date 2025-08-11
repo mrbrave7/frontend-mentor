@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Rubik";
+    transform: all 0.5s ease;
 }
 
 :root {
@@ -19,61 +20,179 @@
 body{
     height: 100vh;
     width: 100vw;
+    padding-inline: 10rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
     background: var(--Very-light-gray);
 }
-#root{
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    justify-content: center;
-    align-items: center;
+button:hover{
+    background: var(--Light-grayish-blue);
 }
-.commentsSection{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-
+#app{
+    width: 800px;
 }
-.commentSection{
-    /* background: var(--White); */
-    
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-.commentDiv{
+#form-container{
+    padding: 2rem;
     background: var(--White);
-    padding: 20px 80px 20px 80px;
-    position: relative;
+    width: 800px;
+    border-radius: 8px;
+    margin-top: 1rem;
 }
-.commentDiv .scoreDiv{
-    position: absolute;
-    left: 20px;
+#comment-form{
+    display: flex;
+    gap: 2rem;
+    align-items: start;
+}
+textarea{
+    height: 100px;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 8px;
+    resize: none;
+    border: 2px solid var(--Grayish-Blue);
+    cursor: grab;
+    font-size: 1rem;
+}
+textarea:focus{
+    border: 2px solid var(--Moderate-blue);
+}
+.btn-primary{
+    padding: 0.5rem 1.2rem;
+    border: 1px solid var(--Light-gray);
+    background: var(--Moderate-blue);
+    border-radius: 8px;
+    outline: none;
+    color: var(--White);
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+.delete-btn{
+    color: var(--Soft-Red);
+}
+.btn-primary:hover{
+    background: var(--Light-grayish-blue);
+}
+
+#comment-list{
     display: flex;
     flex-direction: column;
+    gap: 1rem;
+}
+
+.comment-header{
+    padding: 1rem;
+    background: var(--White);
+    display: flex;
+    align-items: start ;
+    justify-content: start;
+    width: 100%;
+    gap: 1rem;
+}
+.comment-body{
+    width: 100%;
+}
+
+.replies{
+    margin-left: 10rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.comment-user{
+    display: flex;
+    gap: 1rem;
     align-items: center;
-    border-radius: 4px;
-    justify-content: center;
-    top: 20px;
-    background: var(--Light-gray);
+    justify-content: center ;
 }
-.commentDiv .scoreDiv p{
-    color: var(--Moderate-blue);
-}
-.commentDiv .scoreDiv button{
-    height: 25px;
-    width: 25px;
-    outline: none;
-    border: none;
+.comment-user span:last-child {
+    font-size: 1rem;
     color: var(--Grayish-Blue);
 }
-.repliesDiv{
-    margin-left: 80px;
+.comment-content p{
+    font-size: 1.2rem;
+    color: var(--Dark-blue);
+    font-size: 1rem;
+}
+.comment-content{
+    display: flex;
+    gap: 1rem;
+    align-items: end;
+    justify-content: end;
+}
+.comment-content span{
+    font-weight: 600;
+}
+
+.badge{
+    color: var(--White);
+    background: var(--Moderate-blue);
+    padding: 0.5rem;
+        border-radius: 8px;
+        font-size: 1rem;
+}
+.comment-user h5{
+    font-size: 1.2rem;
+}
+
+.comment-score{
+    width: 40px;
+    background: var(--Light-gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.comment-score button{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    width: 40px;
+    height: 40px;
+}
+.rounded-circle{
+    border-radius: 50%;
+    height: 40px;
+}
+.comment-actions{
+    display: flex;
+    gap: 1rem;
+}
+.btn{
+    background: transparent;
+    outline: none;
+    border: none;
+}
+.btn-primary {
+    background: var(--Moderate-blue);
+}
+.comment-head{
     display: flex;
     align-items: center;
-    flex-direction: column;
-    gap: 2rem;
+    justify-content: space-between;
+}
+#comment-form{
+    margin-top: 1rem;
+    padding: 1rem;
+    background: var(--White);
+}
+.replies #form{
+    width: 100%;
+}
+.editable{
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: 2px solid var(--Dark-blue);
+    cursor: grab;
 }
